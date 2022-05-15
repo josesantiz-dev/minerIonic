@@ -1,0 +1,7 @@
+{
+  "name": "miner-monitoring-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

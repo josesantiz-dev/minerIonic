@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "miner-monitoring-front",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
