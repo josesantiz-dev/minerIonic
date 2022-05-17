@@ -1,0 +1,26 @@
+body{
+    background-color: aqua;
+}
+.cards{
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    background-color: #fff;
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+    margin: 1rem;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+#card-tittle{
+    text-align: center;
+}
+#card-tittle h1{
+    color: black;
+    font-size: 38px;
+}
+#card-tittle p{
+    margin-top: 30px;
+    font-size: 15px;
+}

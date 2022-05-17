@@ -10,6 +10,7 @@ import {
 } from "@ionic/react";
 import React from "react";
 import { useParams, useHistory } from "react-router";
+import Dashboard from "../components/Dashboard";
 
 import ExploreContainer from "../components/ExploreContainer";
 import "./Page.css";
@@ -17,6 +18,7 @@ import "./Page.css";
 const Page: React.FC = () => {
   const { name } = useParams<{ name: string }>();
   const history = useHistory();
+
 
   return (
     <IonPage>
@@ -30,7 +32,9 @@ const Page: React.FC = () => {
       </IonHeader>
 
       <IonContent>
-        <ExploreContainer name={name} />
+        { showPahe(name) };
+        {/* <ExploreContainer name={name} /> */}
+
 {/*         <IonButton
           onClick={async () => {
             await logOut();
@@ -43,5 +47,16 @@ const Page: React.FC = () => {
     </IonPage>
   );
 };
+function showPahe(name:string) {   
+   if(name == 'Dashboard'){
+       return(
+           <Dashboard/>
+       )
+   }if(name == 'Workers'){
+
+   }if(name == 'Miners'){
+
+   }
+}  
 
 export default Page;
