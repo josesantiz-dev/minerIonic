@@ -45,7 +45,7 @@ const Dashboard: React.FC = () =>  {
       
     <IonGrid>
         <IonRow>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>725.26 PHs</h1>
@@ -53,7 +53,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>29,982.00 USD</h1>
@@ -64,7 +64,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>6886 / 6907</h1>
@@ -72,7 +72,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>89,120.73</h1>
@@ -80,7 +80,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id='card-tittle'>
                         <h1>725.13 PHs</h1>
@@ -88,7 +88,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>2.97755660 BTC</h1>
@@ -96,7 +96,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>22.282 MW</h1>
@@ -104,7 +104,7 @@ const Dashboard: React.FC = () =>  {
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeMd='3' sizeXs='12'>
+            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>26,738.91 USD</h1>

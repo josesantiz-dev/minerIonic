@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { useParams, useHistory } from "react-router";
 import Dashboard from "../components/Dashboard";
+import Workers from "../components/Workers";
 
 import ExploreContainer from "../components/ExploreContainer";
 import "./Page.css";
@@ -23,7 +24,7 @@ const Page: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="primary">
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
@@ -32,7 +33,7 @@ const Page: React.FC = () => {
       </IonHeader>
 
       <IonContent>
-        { showPahe(name) };
+        { showPane(name) };
         {/* <ExploreContainer name={name} /> */}
 
 {/*         <IonButton
@@ -47,13 +48,15 @@ const Page: React.FC = () => {
     </IonPage>
   );
 };
-function showPahe(name:string) {   
+function showPane(name:string) {   
    if(name == 'Dashboard'){
        return(
            <Dashboard/>
        )
    }if(name == 'Workers'){
-
+     return(
+      <Workers/>
+     )
    }if(name == 'Miners'){
 
    }
