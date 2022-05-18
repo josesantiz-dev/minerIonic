@@ -12,6 +12,7 @@ import React from "react";
 import { useParams, useHistory } from "react-router";
 import Dashboard from "../components/Dashboard";
 import Workers from "../components/Workers";
+import Miners from "../components/Miners";
 
 import ExploreContainer from "../components/ExploreContainer";
 import "./Page.css";
@@ -58,7 +59,9 @@ function showPane(name:string) {
       <Workers/>
      )
    }if(name == 'Miners'){
-
+    return(
+        <Miners/>
+       )
    }
 }  
 

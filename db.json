@@ -1,19 +1,94 @@
 {
-  "posts": [
+  "miners": [
     {
       "id": 1,
-      "title": "json-server-1",
-      "author": "typicode"
+      "owner_id": 100,
+      "firmware_type_id": 200,
+      "local_ip": "192.56.89.65",
+      "local_username": "chris54",
+      "local_password": "12345",
+      "notes": "without note",
+      "state": {
+        "OFFLINE" : "OFFLINE",
+        "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+        "LOW_HASHING" : "LOW_HASHING",
+        "FAN_ERROR" : "FAN_ERROR",
+        "SLEEPING" : "SLEEPING",
+        "OK" : "OK"
+      },
+      "last_state_change": "null"
     },
     {
-      "id": 2,
-      "title": "json-server-2",
-      "author": "typicode"
+        "id": 2,
+        "owner_id": 101,
+        "firmware_type_id": 201,
+        "local_ip": "192.56.89.14",
+        "local_username": "joseph18",
+        "local_password": "12345",
+        "notes": "without note",
+        "state": {
+          "OFFLINE" : "OFFLINE",
+          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+          "LOW_HASHING" : "LOW_HASHING",
+          "FAN_ERROR" : "FAN_ERROR",
+          "SLEEPING" : "SLEEPING",
+          "OK" : "OK"
+        },
+        "last_state_change": "null"
+      },
+    {
+        "id": 1,
+        "owner_id": 102,
+        "firmware_type_id": 202,
+        "local_ip": "192.56.89.44",
+        "local_username": "ema784",
+        "local_password": "12345",
+        "notes": "without note",
+        "state": {
+          "OFFLINE" : "OFFLINE",
+          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+          "LOW_HASHING" : "LOW_HASHING",
+          "FAN_ERROR" : "FAN_ERROR",
+          "SLEEPING" : "SLEEPING",
+          "OK" : "OK"
+        },
+        "last_state_change": "null"
     },
     {
-      "id": 3,
-      "title": "json-server-3",
-      "author": "typicode"
+        "id": 3,
+        "owner_id": 103,
+        "firmware_type_id": 203,
+        "local_ip": "192.56.89.23",
+        "local_username": "charly48",
+        "local_password": "12345",
+        "notes": "without note",
+        "state": {
+          "OFFLINE" : "OFFLINE",
+          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+          "LOW_HASHING" : "LOW_HASHING",
+          "FAN_ERROR" : "FAN_ERROR",
+          "SLEEPING" : "SLEEPING",
+          "OK" : "OK"
+        },
+        "last_state_change": "null"
+    },
+    {
+        "id": 4,
+        "owner_id": 104,
+        "firmware_type_id": 204,
+        "local_ip": "192.56.89.74",
+        "local_username": "marcus40",
+        "local_password": "12345",
+        "notes": "without note",
+        "state": {
+          "OFFLINE" : "OFFLINE",
+          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+          "LOW_HASHING" : "LOW_HASHING",
+          "FAN_ERROR" : "FAN_ERROR",
+          "SLEEPING" : "SLEEPING",
+          "OK" : "OK"
+        },
+        "last_state_change": "null"
     }
   ],
   "comments": [

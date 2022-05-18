@@ -31,40 +31,40 @@ const CommentPage: React.FC = () => {
   const [toast, setToast] = useState({ show: false, message: "" });
 
   // call using queryKey and passing in the parameters
-  const { status, data, error } = useQuery(
+  /* const { status, data, error } = useQuery(
     ["comments", postId],
     API.getAllComments
-  );
+  ); */
 
   // call using queryKey and passing in the parameters
-  const [mutateAddComment] = useMutation(API.addComment, {
+/*   const [mutateAddComment] = useMutation(API.addComment, {
     onSuccess: () => {
       queryCache.refetchQueries("comments");
     },
-  });
+  }); */
 
   //
-  const [mutateDeleteComment] = useMutation(API.deleteComment, {
+/*   const [mutateDeleteComment] = useMutation(API.deleteComment, {
     onSuccess: () => {
       queryCache.refetchQueries("comments");
     },
-  });
+  }); */
 
   /**
    *
    * @param id
    */
-  const deleteComment = async (id: string) => {
+/*   const deleteComment = async (id: string) => {
     let resp = await mutateDeleteComment({ commentId: id });
     setToast({ show: true, message: "Comment Deleted" });
     console.log(resp);
-  };
+  }; */
 
   /**
    *
    * @param param0
    */
-  const onModalClose = async ({
+/*   const onModalClose = async ({
     commentBody,
     cancel,
   }: {
@@ -79,7 +79,7 @@ const CommentPage: React.FC = () => {
     const data = await mutateAddComment({ commentBody, postId });
     setToast({ show: true, message: "Comment Added" });
     console.log(data);
-  };
+  }; */
 
   return (
     <IonPage>
@@ -96,18 +96,18 @@ const CommentPage: React.FC = () => {
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonLoading message={"Loading..."} isOpen={status === "loading"} />
+{/*       <IonLoading message={"Loading..."} isOpen={status === "loading"} />
       {error !== null && (
         <IonAlert message={(error as any).message} isOpen={error !== null} />
-      )}
+      )} */}
 
       <IonContent>
         {/* ION MODAL */}
         <IonModal isOpen={modalOpen}>
-          <CommentModal onClose={onModalClose} />
-        </IonModal>
+{/*           <CommentModal onClose={onModalClose} />
+ */}        </IonModal>
         {/* ION TOAST */}
-        <CommentToast
+{/*         <CommentToast
           isOpen={toast.show}
           onDidDismiss={() => setToast({ show: false, message: "" })}
           message={toast.message}
@@ -118,7 +118,7 @@ const CommentPage: React.FC = () => {
                 <CommentItem key={d.id} data={d} handleClick={deleteComment} />
               );
             })
-          : null}
+          : null} */}
       </IonContent>
     </IonPage>
   );

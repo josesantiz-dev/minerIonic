@@ -1,6 +1,18 @@
 const BASE_URL = "http://localhost:3000";
 
-export const getAllComments = async (key: string, postId: string) => {
+/* export const getAllMiners = async (key:string) => {
+    return new Promise(async (resolve) =>{
+        let r = await fetch(`${BASE_URL}/miners`);
+        let data = await r.json();
+        setTimeout(() => resolve(data),1000);
+    });
+} */
+export const getAllMiners = async () => {
+    const res = await fetch(`${BASE_URL}/miners`);
+    return res.json();
+  };
+
+/* export const getAllComments = async (key: string, postId: string) => {
   return new Promise(async (resolve) => {
     let r = await fetch(`${BASE_URL}/posts/${postId}/comments`);
     let data = await r.json();
@@ -36,4 +48,4 @@ export const deleteComment = async ({ commentId }: any) => {
   } catch (error) {
     return error;
   }
-};
+}; */
