@@ -1,5 +1,30 @@
+import { Console } from "console";
+
 const BASE_URL = "http://localhost:3000";
 
+export const getAllMiners = async () => {
+    const res = await fetch(`${BASE_URL}/miners`);
+    return res.json();
+};
+
+export const getDashboard = async() => {
+    const res = await fetch(`${BASE_URL}/dashboard`);
+    return res.json();
+}
+
+export const getMinerRecord = async() =>{
+    const res = await fetch(`${BASE_URL}/miner_record`);
+    return res.json();
+}
+
+export const getMinerHashRate = async() =>{
+    const res = await fetch(`${BASE_URL}/miner_hash_rate`);
+    return res.json();
+}
+export const getPCBTemperature = async() =>{
+    const res = await fetch(`${BASE_URL}/miner_hash_rate`);
+    return res.json();
+}
 /* export const getAllMiners = async (key:string) => {
     return new Promise(async (resolve) =>{
         let r = await fetch(`${BASE_URL}/miners`);
@@ -7,11 +32,6 @@ const BASE_URL = "http://localhost:3000";
         setTimeout(() => resolve(data),1000);
     });
 } */
-export const getAllMiners = async () => {
-    const res = await fetch(`${BASE_URL}/miners`);
-    return res.json();
-  };
-
 /* export const getAllComments = async (key: string, postId: string) => {
   return new Promise(async (resolve) => {
     let r = await fetch(`${BASE_URL}/posts/${postId}/comments`);

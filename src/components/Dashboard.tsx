@@ -10,12 +10,24 @@ import { useQuery, useMutation, queryCache } from "react-query";
 import { useParams } from "react-router";
 import * as API from "../helpers/api";
 import { KeyObject } from 'crypto';
-
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { MDBDataTableV5 } from 'mdbreact';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import 'chartjs-plugin-zoom';
+import zoomPlugin from "chartjs-plugin-zoom";
+import dataMinerHashRate from "./dataMinerHastRate";
+import dataMinerHashRateTotal from "./dataMinerHastRateTotal";
+import dataPCBTemperature from "./dataMinerPCBTemperature";
+import dataChipTemperature from "./dataMinerChipTemperature";
 Chart.register(CategoryScale);
-
+Chart.register(zoomPlugin); // REGISTER PLUGIN
 
 const Dashboard: React.FC = () =>  {
     const { data, status } = useQuery("users", API.getAllMiners);
+    const dataDashboard = useQuery("dashbaord", API.getDashboard);
+    const minerHashRate = useQuery("has_rate",API.getMinerHashRate);
     const barChartData = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [
@@ -40,7 +52,6 @@ const Dashboard: React.FC = () =>  {
         ]
         };
         
-        //Set Data for Doughnut Chart. In Realtime you may bing this using the data coming from API or service. 
         const doughnutChartData = {
         labels: ['Billable', 'Non Billable'],
         datasets: [
@@ -55,110 +66,202 @@ const Dashboard: React.FC = () =>  {
           }
         ]
         };
-  return (
-      
+
+return (
     <IonGrid>
         <IonRow>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
+            <IonCol sizeXs='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
-                    {/* {status === "error" && <p>Error fetching data</p>}
-      {status === "loading" && <p>Fetching data...</p>}
-      {status === "success" && (
-        <div>
-          {data.map((user) => (
-            <p key={user.id}>{user.id}</p>
-          ))}
-        </div>
-      )} */}
-                        <h1>{(status==='success')?data.length:0}</h1>
-                        
+                        <h1>{(dataDashboard.status==='success')?dataDashboard.data.totalMiners:0}</h1>
                         <p>TOTAL MINERS</p>
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
+            <IonCol sizeXs='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
-                        <h1>29,982.00 USD</h1>
-                        <p>BITCOIN</p>
-                        <IonCardSubtitle>
-                            <p>↓ -2.49% DECREASE 24H AGO</p>
-                        </IonCardSubtitle>
+                        <h1>{(dataDashboard.status==='success')?dataDashboard.data.totalCount:0}</h1>
+                        <p>TOTAL ACCOUNT</p>
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
+            <IonCol sizeXs='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
-                        <h1>6886 / 6907</h1>
-                        <p>ASICs Hashing</p>
-                    </IonCardContent>
-                </IonCard>
-            </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
-                <IonCard className='cards'>
-                    <IonCardContent id="card-tittle">
-                        <h1>89,120.73</h1>
-                        <p>USD / Day</p>
-                    </IonCardContent>
-                </IonCard>
-            </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
-                <IonCard className='cards'>
-                    <IonCardContent id='card-tittle'>
-                        <h1>725.13 PHs</h1>
-                        <p>DAILY SHA-256 MIN</p>
-                    </IonCardContent>
-                </IonCard>
-            </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
-                <IonCard className='cards'>
-                    <IonCardContent id="card-tittle">
-                        <h1>2.97755660 BTC</h1>
-                        <p>BTC / Day</p>
-                    </IonCardContent>
-                </IonCard>
-            </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
-                <IonCard className='cards'>
-                    <IonCardContent id="card-tittle">
-                        <h1>22.282 MW</h1>
-                        <p>TOTAL POWER DRAW</p>
-                    </IonCardContent>
-                </IonCard>
-            </IonCol>
-            <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='4' sizeXl='4'>
-                <IonCard className='cards'>
-                    <IonCardContent id="card-tittle">
-                        <h1>26,738.91 USD</h1>
-                        <p>POWER COST (24 HOURS)</p>
+                        <h1>{(dataDashboard.status==='success')?dataDashboard.data.exchangeRate:0}</h1>
+                        <p>EXCHANGE RATE</p>
                     </IonCardContent>
                 </IonCard>
             </IonCol>
         </IonRow>
         <IonRow>
-            <IonCol sizeMd='6' sizeXs='12' className='columna'>
+            <IonCol sizeXs='4'>
+                <IonCard className='cards'>
+                    <IonCardContent id="card-tittle">
+                        <h1>{(dataDashboard.status==='success')?dataDashboard.data.powerUsage:0}</h1>
+                        <p>POWER USAGE</p>
+                    </IonCardContent>
+                </IonCard>
+            </IonCol>
+            <IonCol sizeXs='4'>
+                <IonCard className='cards'>
+                    <IonCardContent id="card-tittle">
+                        <h1>{(dataDashboard.status==='success')?dataDashboard.data.profitPerMonth:0}</h1>
+                        <p>PROFITE PER MONTH</p>
+                    </IonCardContent>
+                </IonCard>
+            </IonCol>
+            <IonCol sizeXs='4'>
+                <IonCard className='cards'>
+                    <IonCardContent id="card-tittle">
+                    <h1>{(dataDashboard.status==='success')?dataDashboard.data.profitPerDay:0}</h1>
+                        <p>PROFITE PER DAY</p>
+                    </IonCardContent>
+                </IonCard>
+            </IonCol>
+        </IonRow>
+        <IonRow>
+{/*             <IonCol size='8' className='columna'>
+                <IonCard style={{textAlign:'center',padding:'3'}}>
+                    <h4 style={{color:'black'}}>Miners Hash Rate</h4>
+                    <Line data={dataLine} options={{scales:{XAxis:{ticks:{autoSkip:true,maxTicksLimit:10}},YAxis:{ticks:{callback:function(label,index,labels){
+                        return index.toFixed(2) + " Th/s";
+                    }}}}}}/>
+                </IonCard>
+            </IonCol> */}
+{/*             <IonCol size='4' className='columna'>
+                <IonCard style={{textAlign:'center', padding:'3'}}>
+                    <h4 style={{color:'black'}}>Tank 1 AC state</h4>
+                    <Line data={dataLine} options={{scales:{XAxis:{ticks:{autoSkip:true,maxTicksLimit:10}},YAxis:{ticks:{callback:function(label,index,labels){
+                        return index.toFixed(2) + " Th/s";
+                    }}}}}}/>
+                </IonCard>
+            </IonCol> */}
+        </IonRow>
+        <IonRow>
+            <IonCol size='6' className='columna'>
+                <IonCard style={{textAlign:'center' , padding:'3'}}>
+                    <h4 style={{color:'black'}}>Miners Hash Rate</h4>
+                    <Line data={dataMinerHashRate} options={{
+                        scales:{
+                            XAxis:{
+                                ticks:{
+                                    autoSkip:true,
+                                    maxTicksLimit:10
+                                }
+                            },
+                            YAxis:{
+                                ticks:{
+                                    callback:function(label,index,labels){
+                                        return label + " Th/s";
+                                    }
+                                }
+                            }
+                        },
+                        plugins:{
+                            zoom:{
+                                pan:{
+                                    enabled:true,
+                                    mode:'x',
+                                    
+                                },
+                                zoom: {
+                                    wheel:{
+                                        enabled:true
+                                    },
+                                    mode:'xy',
+                                    
+                                }
+                                
+                            }
+                        }
+                    }}/>
+                </IonCard>
+            </IonCol>
+            <IonCol size='6' className='columna'>
+                <IonCard style={{textAlign:'center', padding:'3'}}>
+                    <h4 style={{color:'black'}}>Miners Hash Rate Total</h4>
+                    <Line data={dataMinerHashRateTotal} options={{
+                        scales:{
+                            XAxis:{
+                                ticks:{
+                                    autoSkip:true,
+                                    maxTicksLimit:10
+                                }
+                            },
+                            YAxis:{
+                                ticks:{
+                                    callback:function(label,index,labels){
+                                        return label + " Th/s";
+                                    }
+                                }
+                            }
+                        },
+                        plugins:{
+                            zoom:{
+                                pan:{
+                                    enabled:true,
+                                    mode:'x',
+                                    
+                                },
+                                zoom: {
+                                    wheel:{
+                                        enabled:true
+                                    },
+                                    mode:'xy',
+                                    
+                                }
+                                
+                            }
+                        }
+                    }}/>
+                </IonCard>
+            </IonCol>
+        </IonRow>
+        <IonRow>
+            <IonCol size='6' className='columna'>
+                <IonCard style={{textAlign:'center', padding:'3'}}> 
+                    <h4 style={{color:'black'}}>Miners PCB Temperature Average</h4>
+                    <Line data={dataPCBTemperature} options={{scales:{XAxis:{ticks:{autoSkip:true,maxTicksLimit:10}},YAxis:{ticks:{callback:function(label,index,labels){
+                        return label + " ºC";
+                    }}}}}}/>
+                </IonCard>
+            </IonCol>     
+            <IonCol size='6' className='columna'>
+                <IonCard style={{textAlign:'center', padding:'3'}}> 
+                    <h4 style={{color:'black'}}>Miners Chip Temperature Average</h4>
+                    <Line data={dataChipTemperature} options={{scales:{XAxis:{ticks:{autoSkip:true,maxTicksLimit:10}},YAxis:{ticks:{callback:function(label,index,labels){
+                        return label + " ºC";
+                    }}}}}}/>
+                </IonCard>
+            </IonCol>         
+        </IonRow>
+        <IonRow>
+{/*             <IonCol sizeMd='6' sizeXs='12' className='columna'>
                 <IonCard>
                     <Bar data={barChartData}
                         options={{ maintainAspectRatio: true}}   />
                 </IonCard>
-            </IonCol>
-            <IonCol sizeMd='6' sizeXs='12' className='columna'>
+            </IonCol> */}
+{/*             <IonCol sizeMd='6' sizeXs='12' className='columna'>
                 <IonCard>
                     <Doughnut data={doughnutChartData}
                         options={{ maintainAspectRatio: false,responsive: true,}}/>
                 </IonCard>
-            </IonCol>
-            <IonCol sizeMd='6' sizeXs='12'>
+            </IonCol> */}
+{/*             <IonCol sizeMd='6' sizeXs='12'>
                 <IonCard>
                     <Pie data={doughnutChartData}
                         options={{ maintainAspectRatio: false}}   />
                 </IonCard>
-            </IonCol>
+            </IonCol> */}
+{/*             <IonCol>
+                <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} pagingTop searchTop searchBottom={false} barReverse/>
+            </IonCol> */}
         </IonRow>
     </IonGrid>
+    
   );
 }
-
 export default Dashboard;

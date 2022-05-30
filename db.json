@@ -1,74 +1,139 @@
 {
-  "miners": [
+    "dashboard":
     {
-      "id": 1,
-      "owner_id": 100,
-      "firmware_type_id": 200,
-      "local_ip": "192.56.89.65",
-      "local_username": "chris54",
-      "local_password": "12345",
-      "notes": "without note",
-      "state": {
-        "OFFLINE" : "OFFLINE",
-        "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
-        "LOW_HASHING" : "LOW_HASHING",
-        "FAN_ERROR" : "FAN_ERROR",
-        "SLEEPING" : "SLEEPING",
-        "OK" : "OK"
-      },
-      "last_state_change": "null"
+        "totalMiners":50,
+        "runningCount": 3,
+        "totalCount": 25,
+        "gpuCount": 0,
+        "pgaCount": 0,
+        "asicCount": 3,
+        "cpuCount": 0,
+        "exchangeRate": "$8 646,16",
+        "revenuePerDay": "$15,22",
+        "revenuePerDayValueBtc": 0.00176,
+        "revenuePerMonth": "$461,27",
+        "revenuePerMonthValueBtc": 0.053349,
+        "profitPerDay": "$15,22",
+        "profitPerDayValueBtc": 0.00176,
+        "profitPerMonth": "$461,27",
+        "profitPerMonthValueBtc": 0.053349,
+        "powerUsage": "5,33 kW",
+        "powerUsageValue": 5325,
+        "coinList": [
+            {
+                "name": "Bitcoin (BTC)",
+                "activeCount": 2,
+                "hashRate5s": "88,78 TH/s",
+                "hashRateAvg": "89,48 TH/s",
+                "revenue": "$12,46",
+                "temperature": 59
+            },
+            {
+                "name": "Litecoin (LTC)",
+                "activeCount": 1,
+                "hashRate5s": "606,84 MH/s",
+                "hashRateAvg": "604,12 MH/s",
+                "revenue": "$2,76",
+                "temperature": 56
+            }
+        ],
+        "algorithmList": [
+            {
+                "name": "SHA-256",
+                "activeCount": 2,
+                "hashRate5s": "88,78 TH/s",
+                "hashRateAvg": "89,48 TH/s",
+                "revenue": "$12,46",
+                "temperature": 59
+            },
+            {
+                "name": "Scrypt",
+                "activeCount": 1,
+                "hashRate5s": "606,84 MH/s",
+                "hashRateAvg": "604,12 MH/s",
+                "revenue": "$2,76",
+                "temperature": 56
+            }
+        ]
+    },
+    "miners": [
+    {
+        "id": 1,
+        "owner_id": 100,
+        "name": "Antminer S17",
+        "firmware_type_id": 200,
+        "local_ip": "192.56.89.65",
+        "local_username": "chris54",
+        "mac_address":"2C:54:91:88:C9:E3",
+        "local_password": "12345",
+        "notes": "without note",
+        "state": {
+            "OFFLINE" : "OFFLINE",
+            "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+            "LOW_HASHING" : "LOW_HASHING",
+            "FAN_ERROR" : "FAN_ERROR",
+            "SLEEPING" : "SLEEPING",
+            "OK" : "OK"
+        },
+        "last_state_change": "null"
     },
     {
         "id": 2,
         "owner_id": 101,
+        "name": "Antminer S18",
         "firmware_type_id": 201,
         "local_ip": "192.56.89.14",
         "local_username": "joseph18",
+        "mac_address":"2C:54:91:77:C6:E3",
         "local_password": "12345",
         "notes": "without note",
         "state": {
-          "OFFLINE" : "OFFLINE",
-          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
-          "LOW_HASHING" : "LOW_HASHING",
-          "FAN_ERROR" : "FAN_ERROR",
-          "SLEEPING" : "SLEEPING",
-          "OK" : "OK"
+            "OFFLINE" : "OFFLINE",
+            "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+            "LOW_HASHING" : "LOW_HASHING",
+            "FAN_ERROR" : "FAN_ERROR",
+            "SLEEPING" : "SLEEPING",
+            "OK" : "OK"
         },
         "last_state_change": "null"
-      },
+    },
     {
         "id": 1,
         "owner_id": 102,
         "firmware_type_id": 202,
+        "name": "Antminer S19",
         "local_ip": "192.56.89.44",
         "local_username": "ema784",
+        "mac_address":"25:54:91:88:C9:E9",
         "local_password": "12345",
         "notes": "without note",
         "state": {
-          "OFFLINE" : "OFFLINE",
-          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
-          "LOW_HASHING" : "LOW_HASHING",
-          "FAN_ERROR" : "FAN_ERROR",
-          "SLEEPING" : "SLEEPING",
-          "OK" : "OK"
+            "OFFLINE" : "OFFLINE",
+            "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+            "LOW_HASHING" : "LOW_HASHING",
+            "FAN_ERROR" : "FAN_ERROR",
+            "SLEEPING" : "SLEEPING",
+            "OK" : "OK"
         },
         "last_state_change": "null"
     },
     {
         "id": 3,
         "owner_id": 103,
+        "name": "Antminer S20",
         "firmware_type_id": 203,
         "local_ip": "192.56.89.23",
         "local_username": "charly48",
+        "mac_address":"2C:10:34:78:D9:E3",
         "local_password": "12345",
         "notes": "without note",
         "state": {
-          "OFFLINE" : "OFFLINE",
-          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
-          "LOW_HASHING" : "LOW_HASHING",
-          "FAN_ERROR" : "FAN_ERROR",
-          "SLEEPING" : "SLEEPING",
-          "OK" : "OK"
+            "OFFLINE" : "OFFLINE",
+            "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+            "LOW_HASHING" : "LOW_HASHING",
+            "FAN_ERROR" : "FAN_ERROR",
+            "SLEEPING" : "SLEEPING",
+            "OK" : "OK"
         },
         "last_state_change": "null"
     },
@@ -78,53 +143,108 @@
         "firmware_type_id": 204,
         "local_ip": "192.56.89.74",
         "local_username": "marcus40",
+        "mac_address":"8H:24:10:88:C9:E3",
         "local_password": "12345",
         "notes": "without note",
         "state": {
-          "OFFLINE" : "OFFLINE",
-          "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
-          "LOW_HASHING" : "LOW_HASHING",
-          "FAN_ERROR" : "FAN_ERROR",
-          "SLEEPING" : "SLEEPING",
-          "OK" : "OK"
+            "OFFLINE" : "OFFLINE",
+            "HIGH_TEMPERATURE" : "HIGH_TEMPERATURE",
+            "LOW_HASHING" : "LOW_HASHING",
+            "FAN_ERROR" : "FAN_ERROR",
+            "SLEEPING" : "SLEEPING",
+            "OK" : "OK"
         },
         "last_state_change": "null"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment 1 on post 1",
-      "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "some comment 2 on post 1",
-      "postId": 1
-    },
-    {
-      "id": 3,
-      "body": "some comment on post 2",
-      "postId": 2
-    },
-    {
-      "id": 4,
-      "body": "some comment on post 3",
-      "postId": 3
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "body": "A anew comment on post 3",
-      "postId": "3",
-      "id": 8
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    ],
+    "miner_record":[
+        {
+            "id":1,
+            "miner_id":1,
+            "miner_name": "Antminer S17",
+            "temperature": 2,
+            "hashrate": "73,22 TH/s",
+            "timestamp": "2022-12-15 13:25:45"
+        },
+        {
+            "id":2,
+            "miner_id":2,
+            "miner_name": "Antminer S18",
+            "temperature": 2,
+            "hashrate": "70,10 TH/s",
+            "timestamp": "2022-12-15 13:25:45"
+        },
+        {
+            "id":3,
+            "miner_id":3,
+            "miner_name": "Antminer S19",
+            "temperature": 2,
+            "hashrate": "71,18 TH/s",
+            "timestamp": "2022-12-15 13:25:45"
+        },
+        {
+            "id":4,
+            "miner_id":1,
+            "miner_name": "Antminer S17",
+            "temperature": 2,
+            "hashrate": "73,40 TH/s",
+            "timestamp": "2022-12-15 13:27:18"
+        },
+        {
+            "id":5,
+            "miner_id":2,
+            "miner_name": "Antminer S18",
+            "temperature": 2,
+            "hashrate": "73,50 TH/s",
+            "timestamp": "2022-12-15 13:27:18"
+        },
+        {
+            "id":6,
+            "miner_id":3,
+            "miner_name": "Antminer S19",
+            "temperature": 2,
+            "hashrate": "73,14 TH/s",
+            "timestamp": "2022-12-15 13:27:18"
+        },
+        {
+            "id":7,
+            "miner_id":1,
+            "miner_name": "Antminer S17",
+            "temperature": 2,
+            "hashrate": "73,74 TH/s",
+            "timestamp": "2022-12-15 13:30:00"
+        },
+        {
+            "id":8,
+            "miner_id":2,
+            "miner_name": "Antminer S18",
+            "temperature": 2,
+            "hashrate": "73,06 TH/s",
+            "timestamp": "2022-12-15 13:30:00"
+        },
+        {
+            "id":9,
+            "miner_id":3,
+            "miner_name": "Antminer S19",
+            "temperature": 2,
+            "hashrate": "73,40 TH/s",
+            "timestamp": "2022-12-15 13:30:00"
+        }
+    ],
+    "miner_hash_rate" : [
+        {
+            "miner_name": "_3CA3085D9EA3.hash_rate",
+            "data" : [
+                {
+                    "2022-05-29 00:12:12":50
+                },
+                {
+                    "2022-05-29 00:15:12":100
+                }
+            ]
+        },
+        {
+
+        }
+    ]
 }

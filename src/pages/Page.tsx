@@ -13,6 +13,7 @@ import { useParams, useHistory } from "react-router";
 import Dashboard from "../components/Dashboard";
 import Workers from "../components/Workers";
 import Miners from "../components/Miners";
+import Alerts from "../components/Alerts";
 
 import ExploreContainer from "../components/ExploreContainer";
 import "./Page.css";
@@ -34,7 +35,7 @@ const Page: React.FC = () => {
       </IonHeader>
 
       <IonContent>
-        { showPane(name) };
+        { showPane(name) }
         {/* <ExploreContainer name={name} /> */}
 
 {/*         <IonButton
@@ -50,19 +51,22 @@ const Page: React.FC = () => {
   );
 };
 function showPane(name:string) {   
-   if(name == 'Dashboard'){
-       return(
-           <Dashboard/>
-       )
-   }if(name == 'Workers'){
-     return(
-      <Workers/>
-     )
-   }if(name == 'Miners'){
-    return(
-        <Miners/>
-       )
-   }
+    if(name == 'Dashboard'){
+        return(
+            <Dashboard/>
+        )
+    }if(name == 'Workers'){
+        return(
+            <Workers/>
+        )
+    }if(name == 'Miners'){
+        return(
+            <Miners/>
+        )
+    }if(name == 'Alerts'){
+        return(
+            <Alerts/>
+        )
+    }
 }  
-
 export default Page;

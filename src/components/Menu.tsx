@@ -45,7 +45,7 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Alerts & Triggers',
-    url: '/Alerts',
+    url: '/page/Alerts',
     iosIcon: pricetagOutline,
     mdIcon: heartSharp
   },
