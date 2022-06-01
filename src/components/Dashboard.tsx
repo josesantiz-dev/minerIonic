@@ -70,7 +70,7 @@ const Dashboard: React.FC = () =>  {
 return (
     <IonGrid>
         <IonRow>
-            <IonCol sizeXs='4'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>{(dataDashboard.status==='success')?dataDashboard.data.totalMiners:0}</h1>
@@ -78,7 +78,7 @@ return (
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeXs='4'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>{(dataDashboard.status==='success')?dataDashboard.data.totalCount:0}</h1>
@@ -86,7 +86,7 @@ return (
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeXs='4'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>{(dataDashboard.status==='success')?dataDashboard.data.exchangeRate:0}</h1>
@@ -96,7 +96,7 @@ return (
             </IonCol>
         </IonRow>
         <IonRow>
-            <IonCol sizeXs='4'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>{(dataDashboard.status==='success')?dataDashboard.data.powerUsage:0}</h1>
@@ -104,7 +104,7 @@ return (
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeXs='4'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                         <h1>{(dataDashboard.status==='success')?dataDashboard.data.profitPerMonth:0}</h1>
@@ -112,7 +112,7 @@ return (
                     </IonCardContent>
                 </IonCard>
             </IonCol>
-            <IonCol sizeXs='4'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                 <IonCard className='cards'>
                     <IonCardContent id="card-tittle">
                     <h1>{(dataDashboard.status==='success')?dataDashboard.data.profitPerDay:0}</h1>
@@ -140,7 +140,7 @@ return (
             </IonCol> */}
         </IonRow>
         <IonRow>
-            <IonCol size='6' className='columna'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='6' sizeLg='6' sizeXl='6' className='columna'>
                 <IonCard style={{textAlign:'center' , padding:'3'}}>
                     <h4 style={{color:'black'}}>Miners Hash Rate</h4>
                     <Line data={dataMinerHashRate} options={{
@@ -179,7 +179,7 @@ return (
                     }}/>
                 </IonCard>
             </IonCol>
-            <IonCol size='6' className='columna'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='6' sizeLg='6' sizeXl='6' className='columna'>
                 <IonCard style={{textAlign:'center', padding:'3'}}>
                     <h4 style={{color:'black'}}>Miners Hash Rate Total</h4>
                     <Line data={dataMinerHashRateTotal} options={{
@@ -220,7 +220,7 @@ return (
             </IonCol>
         </IonRow>
         <IonRow>
-            <IonCol size='6' className='columna'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='6' sizeLg='6' sizeXl='6' className='columna'>
                 <IonCard style={{textAlign:'center', padding:'3'}}> 
                     <h4 style={{color:'black'}}>Miners PCB Temperature Average</h4>
                     <Line data={dataPCBTemperature} options={{scales:{XAxis:{ticks:{autoSkip:true,maxTicksLimit:10}},YAxis:{ticks:{callback:function(label,index,labels){
@@ -228,7 +228,7 @@ return (
                     }}}}}}/>
                 </IonCard>
             </IonCol>     
-            <IonCol size='6' className='columna'>
+            <IonCol sizeXs='12' sizeSm='12' sizeMd='6' sizeLg='6' sizeXl='6' className='columna'>
                 <IonCard style={{textAlign:'center', padding:'3'}}> 
                     <h4 style={{color:'black'}}>Miners Chip Temperature Average</h4>
                     <Line data={dataChipTemperature} options={{scales:{XAxis:{ticks:{autoSkip:true,maxTicksLimit:10}},YAxis:{ticks:{callback:function(label,index,labels){

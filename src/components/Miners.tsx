@@ -481,7 +481,7 @@ const Page: React.FC = () => {
             <IonRow>
                 <IonCol size="12" style={{padding:20}}>
                     <div style={{textAlign:'right'}}>
-                        <div className="col-4">
+                        <div className="col-md-6">
                                 {myModal && (<MyModal
                                     isOpen={myModal} 
                                     initialData = {{...myUser}}
@@ -504,7 +504,7 @@ const Page: React.FC = () => {
                         </div>
                     </div><br></br>
                     <IonCard style={{padding:10}}>
-                        <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} pagingTop searchTop searchBottom={false} barReverse/>
+                        <MDBDataTableV5 scrollX hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} pagingTop searchTop searchBottom={false} barReverse/>
                     </IonCard>
                     
                 </IonCol>

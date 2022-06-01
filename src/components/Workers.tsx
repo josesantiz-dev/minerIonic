@@ -343,7 +343,7 @@ const Page: React.FC = () => {
     return(
        <IonGrid>
             <IonRow>
-                <IonCol sizeXs="4">
+                <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                     <IonCard className="cards">
                         <IonCardContent id="card-tittle">
                             <h1>1</h1>
@@ -351,7 +351,7 @@ const Page: React.FC = () => {
                         </IonCardContent>
                     </IonCard>
                </IonCol>
-               <IonCol sizeXs="4">
+               <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                     <IonCard className="cards">
                         <IonCardContent id="card-tittle">
                             <h1>6906 / 6906</h1>
@@ -359,7 +359,7 @@ const Page: React.FC = () => {
                         </IonCardContent>
                     </IonCard>
                </IonCol>
-               <IonCol sizeXs="4">
+               <IonCol sizeXs='12' sizeSm='12' sizeMd='4' sizeLg='4' sizeXl='4'>
                     <IonCard className="cards">
                         <IonCardContent id="card-tittle">
                             <h1>996</h1>
@@ -371,7 +371,7 @@ const Page: React.FC = () => {
            <IonRow>
                <IonCol>
                     <IonCard style={{padding:10}}>
-                        <MDBDataTableV5 hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} pagingTop searchTop searchBottom={false} barReverse/>
+                        <MDBDataTableV5 scrollX hover entriesOptions={[5, 20, 25]} entries={5} pagesAmount={4} data={datatable} pagingTop searchTop searchBottom={false} barReverse/>
                     </IonCard>
                </IonCol>
            </IonRow>
