@@ -30,6 +30,18 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 import TabRootPage from "./pages/TabRootPage";
 
+const prefersDark = window.matchMedia('(prefers-color-scheme: light)');
+
+toggleDarkTheme(prefersDark.matches);
+
+// Listen for changes to the prefers-color-scheme media query
+prefersDark.addListener((mediaQuery) => toggleDarkTheme(mediaQuery.matches));
+
+// Add or remove the "dark" class based on if the media query matches
+function toggleDarkTheme(shouldAdd) {
+  document.body.classList.toggle('light', shouldAdd);
+}
+
 const App: React.FC = () => {
     return(
         <IonApp>
