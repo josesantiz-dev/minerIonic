@@ -1,29 +1,57 @@
 body{
     background-color: aqua;
 }
-.cards{
-    padding: 2.5rem 2rem;
-    border-radius: 20px;
-    background-color: #fff;
+.cards1{
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    background-color: #fff !important;
     max-width: 300px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .15);
     margin: 1rem;
-    height: 130px;
+    padding: 10%;
     position: relative;
     transform-style: preserve-3d;
     overflow: hidden;
 }
-#card-tittle{
+#card-tittle1{
     text-align: center;
 }
-#card-tittle h1{
+#card-tittle1 h1{
+    margin-top: -25px;
+    margin-bottom: 10px;
     color: black;
     font-size: 28px;
 }
-#card-tittle p{
-    margin-top: 20px;
+#card-tittle1 p{
+    margin-top: 5px;
+    margin-bottom: -20px;
     font-size: 12px;
 }
-.cardLine{
+/* .cardLine{
     background-color: #181b1f;
 }
+
+.cardsChar{
+    background-color: #fff !important;
+} */
+
+@media all and (max-width:768px){
+    #cardm {
+      width: 50%;
+      height: 110px;
+      padding: 0px;
+      margin: 0px;
+      object-fit: cover;
+    }
+    #cardm p  {
+        font-size: xx-small;
+      }
+    #cardm h1{
+        font-size: medium;
+        margin-bottom: 5px;
+    }
+    .cards1{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+   }
